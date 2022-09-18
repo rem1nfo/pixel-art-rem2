@@ -1,4 +1,6 @@
 // ******** Définition des variables importantes ********
+console.log("Welcome");
+
 // Variables pour socket avev serveur (app.js)
 var socket = io();
 
