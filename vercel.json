@@ -1,6 +1,6 @@
 {
     "version": 1,
-    "name": "pixel-art v2",
+    "name": "pixel-art-rem2",
     "builds": [
        { "src": "app.js", "use": "@vercel/node" }
     ],
