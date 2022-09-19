@@ -26,9 +26,14 @@ async function init_list(){
 }
 // Fonction d'écriture dans le fichier save.json (= sauvegarde la base de données)
 function save(){
-    fs.writeFileSync("./save.json", JSON.stringify(list_of_pixels));
-}
+    try{
+        fs.writeFileSync("./save.json", JSON.stringify(list_of_pixels));
 
+    }
+    catch(err){
+        io.emit("test_debug", function(){});
+    }
+}
 
 
 

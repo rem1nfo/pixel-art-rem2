@@ -157,3 +157,11 @@ socket.on('display_one_pixel', function(msg){
     context.fillStyle = new_pixel.color;
     context.fillRect(new_pixel.x,new_pixel.y,size_cell,size_cell);
 });
+
+
+
+
+//test pour deboggage
+socket.on('test_debug', function(msg){
+    console.log("Problème lors de l'enregistrement dans le fichier")
+});
