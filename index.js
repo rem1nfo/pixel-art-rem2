@@ -38,7 +38,7 @@ function save(){
 
 
 // la fonction de sauvegarde est lancee toutes les 1000 ms ( => toutes les secondes)
-setTimeout(save, 100000);
+setTimeout(save, 10000);
 
 
 
