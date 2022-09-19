@@ -26,6 +26,7 @@ async function init_list(){
 }
 // Fonction d'écriture dans le fichier save.json (= sauvegarde la base de données)
 function save(){
+    io.emit("is_saving");
     try{
         fs.writeFileSync("./save.json", JSON.stringify(list_of_pixels));
 

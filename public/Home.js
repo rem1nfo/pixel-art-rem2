@@ -165,3 +165,6 @@ socket.on('display_one_pixel', function(msg){
 socket.on('test_debug', function(msg){
     console.log("Problème lors de l'enregistrement dans le fichier")
 });
+socket.on("is_saving", function(){
+    console.log("Auto-save");
+})
