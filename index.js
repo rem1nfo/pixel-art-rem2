@@ -36,7 +36,7 @@ function save(){
 
 
 // Lancement du serveur sur le port 3000
-http.listen(3000, function(){
+http.listen(process.env.PORT || 3000, function(){
     console.log("Server running on port 3000");
 })
 
