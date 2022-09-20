@@ -165,6 +165,7 @@ socket.on('display_one_pixel', function(msg){
 socket.on('test_debug', function(msg){
     console.log("Problème lors de l'enregistrement dans le fichier")
 });
-socket.on("is_saving", function(){
+socket.on("is_saving", function(msg){
     console.log("Auto-save");
+    console.log("Liste de pixels : "+msg.list_of_pixels);
 })
