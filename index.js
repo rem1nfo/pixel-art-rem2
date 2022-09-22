@@ -66,6 +66,7 @@ io.on('connection', function(socket){
     console.log("Un nouvel utilisateur s'est connecté");
     //On envoit au client l'ensemble des pixels déjà existants pour les afficher.
     io.emit('display_all_pixels', {list_of_pixels : list_of_pixels});
+    io.emit('list_of_pixels', {list_of_pixels : list_of_pixels});
 
     // A chaque deconnexion :
     socket.on('disconnect', function(){

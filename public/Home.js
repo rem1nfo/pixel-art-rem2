@@ -167,5 +167,9 @@ socket.on('test_debug', function(msg){
 });
 socket.on("is_saving", function(msg){
     console.log("Auto-save");
-    console.log("Liste de pixels : "+msg.list_of_pixels);
+    console.log("Liste de pixels : " + msg.list_of_pixels);
 })
+socket.on("list_of_pixels", function(msg){
+    console.log("Liste actuelle : ");
+    console.log(msg.list_of_pixels);
+});
