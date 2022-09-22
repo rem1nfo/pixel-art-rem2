@@ -13,7 +13,8 @@ app.use(express.static(__dirname + "/public")); //Pour spécifier le chemin des 
 
 // Variables de jeu : 
 var list_of_pixels = []; // Note : au lancement, liste vide qui doit être initialisée à partir du fichier "mémoire" qui enregistre régulièrement la toile. (Important de faire une sauvegarde dans un fichier car si le serveur se coupe, le contenu de la liste définie dans le serveur est perdu)
-list_of_pixels = process.env.LIST_OF_PIXELS; // On importe la variable d'environnement définie dans HEROKU
+list_of_pixels.push({"x":100, "y":200, "color":"#56A789"});
+io.emit('list_of_pixels', {list_of_pixels : list_of_pixels});
 //init_list();
 
 
@@ -30,7 +31,7 @@ function save(){
     io.emit("is_saving", {list_of_pixels : list_of_pixels});
     try{
         //fs.writeFileSync("./save.json", JSON.stringify(list_of_pixels));
-        process.env.LIST_OF_PIXELS = list_of_pixels;
+        console.log("Auto-save");
     }
     catch(err){
         io.emit("test_debug", function(){});
